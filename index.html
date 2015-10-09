@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> Lab 7 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int x;
+int y;
+
+void setup()
+{
+
+	size( 500, 500 );
+	frameRate( 30 );
+	x = 0;
+	y = 1;
+}
+
+
+void draw()
+{
+
+	background(0,100,200);
+	text(x,100,100);
+	rect(30,30,100,50);
+	
+	if (mousePressed == true)
+	{
+		if (y > 0 && mouseButton == LEFT && mouseX > 30 && mouseX < 130 && mouseY > 30 && mouseY < 80)
+		{
+			x = x + 1
+			y = -1
+		}
+	}
+	if (mousePressed == false)
+	{
+		y = 1
+	}
+	
+	
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
